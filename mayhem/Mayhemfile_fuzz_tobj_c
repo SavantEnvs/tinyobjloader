@@ -1,0 +1,9 @@
+project: savantenvs/tinyobjloader
+target: fuzz_tobj_c
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_tobj_c/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tobj_c
+    libfuzzer: true
+    timeout: 10
